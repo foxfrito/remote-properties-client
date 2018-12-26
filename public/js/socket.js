@@ -1,5 +1,6 @@
 $( document ).ready(() => {
-    const socket = io.connect('http://localhost:3002');
+    //const socket = io.connect('http://localhost:3002');
+    const socket = io.connect('https://remote-properties-client.herokuapp.com/');
 
     //init
     let quantity = localStorage.getItem('qtd') === null ? 1 : localStorage.getItem('qtd');
