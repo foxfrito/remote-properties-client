@@ -20,7 +20,8 @@ app.use(function(req, res, next) {
     next();
   });
 
-const server = app.listen(3002, () => console.log('listening on port 3002!'));
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => console.log(`listening on port ${PORT}!`));
 
 const io = socket(server);
 io.on('connection', (socket) => {
